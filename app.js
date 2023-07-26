@@ -39,12 +39,6 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use((req, res, next) => {
-  req.requestTime = Date.now();
-  console.log(req.requestTime);
-  next();
-});
-
 app.use("/dogs", (req, res, next) => {
   console.log("This is my first middleware");
   next();
