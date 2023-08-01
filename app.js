@@ -39,8 +39,8 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/dogs", (req, res, next) => {
-  console.log("This is my first middleware");
+app.use((req, res, next) => {
+  console.log("This is my second middleware");
   next();
 });
 
